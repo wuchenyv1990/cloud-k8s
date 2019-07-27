@@ -6,7 +6,7 @@ demo，部署在k8s上的多个应用，包括
 <li>样例工程</li>
 <br>
 其中4个样例服务a、b、c、d，调用链如下：<br>
-![avatar](trace.png)
+![avatar](res/trace.png)
 <br>
 
 配置"loud.k8s.x-trace-id.enabled"开启返回header里添加X-cloud-k8s-traceId，示例如下<br>
