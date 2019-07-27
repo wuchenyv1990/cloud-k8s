@@ -26,6 +26,7 @@
         <module>svc-b</module>
         <module>svc-c</module>
         <module>svc-d</module>
+        <module>svc-common</module>
     </modules>
 
     <dependencyManagement>
@@ -43,6 +44,11 @@
                 <version>${spring.cloud.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>com.wuchenyv1990</groupId>
+                <artifactId>svc-common</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

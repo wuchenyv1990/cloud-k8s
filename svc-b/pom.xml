@@ -24,6 +24,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-sleuth-zipkin</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.wuchenyv1990</groupId>
+            <artifactId>svc-common</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

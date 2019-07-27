@@ -1,5 +1,5 @@
 server:
-  port: ${svc-a-port:8080}
+  port: ${svc-b-port:8080}
 spring:
   zipkin:
     base-url: http://${zipkin-host:localhost}:${zipkin-port:9411}/
