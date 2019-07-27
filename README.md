@@ -6,8 +6,10 @@ demo，部署在k8s上的多个应用，包括
 <li>样例工程</li>
 <br>
 其中4个样例服务a、b、c、d，调用链如下：<br>
-![avatar](res/trace.png)
-<br>
+
+![trace](trace.jpg) 
+
+## trace
 
 配置"loud.k8s.x-trace-id.enabled"开启返回header里添加X-cloud-k8s-traceId，示例如下<br>
 < HTTP/1.1 200 <br>
@@ -15,4 +17,3 @@ demo，部署在k8s上的多个应用，包括
 < Content-Type: application/json;charset=UTF-8<br>
 < Transfer-Encoding: chunked<br>
 < Date: Sat, 27 Jul 2019 07:56:49 GMT<br>
-
