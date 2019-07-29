@@ -27,7 +27,7 @@ spec:
                 name: svc-config-map
                 key: SVC-C-HOST
           - name: ZIPKIN-HOST
-              valueFrom:
-                configMapKeyRef:
-                  name: svc-config-map
-                  key: ZIPKIN-HOST
+            valueFrom:
+              configMapKeyRef:
+                name: svc-config-map
+                key: ZIPKIN-HOST
