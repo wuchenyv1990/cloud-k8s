@@ -1,0 +1,8 @@
+SVC-A-HOST=localhost
+SVC-A-PORT=8081
+SVC-B-HOST=localhost
+SVC-B-PORT=8082
+SVC-C-HOST=localhost
+SVC-C-PORT=8083
+SVC-C-HOST=localhost
+SVC-D-PORT=8084

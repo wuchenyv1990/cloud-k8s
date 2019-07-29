@@ -17,3 +17,7 @@ demo，部署在k8s上的多个应用，包括
 < Content-Type: application/json;charset=UTF-8<br>
 < Transfer-Encoding: chunked<br>
 < Date: Sat, 27 Jul 2019 07:56:49 GMT<br>
+
+## docker images & k8s
+./build-images.sh，复制mvn repo的jar到目录并生成镜像<br>
+/k8s/目录下为相关yaml

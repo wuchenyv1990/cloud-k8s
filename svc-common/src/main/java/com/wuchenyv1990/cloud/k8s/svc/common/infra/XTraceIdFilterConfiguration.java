@@ -58,9 +58,9 @@ public class XTraceIdFilterConfiguration {
             HttpServletResponse httpResponse = (HttpServletResponse) response;
             TraceContext context = (TraceContext) request.getAttribute(TraceContext.class.getName());
             if (context != null) {
-                httpResponse.addHeader(X_TRACE_ID, context.traceIdString());
+                httpResponse.setHeader(X_TRACE_ID, context.traceIdString());
             } else {
-                httpResponse.addHeader(X_TRACE_ID, X_TRACE_ID_UNKNOWN);
+                httpResponse.setHeader(X_TRACE_ID, X_TRACE_ID_UNKNOWN);
             }
             chain.doFilter(request, response);
         }

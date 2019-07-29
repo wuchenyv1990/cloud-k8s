@@ -4,7 +4,7 @@ import com.wuchenyv1990.cloud.k8s.svc.common.domain.dto.BCDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient(name = "client-b", url = "${svc-b-host:localhost}:${svc-b-port:8080}")
+@FeignClient(name = "client-b", url = "${SVC-B-HOST:localhost}:${SVC-B-PORT:8080}")
 public interface ClientB {
 
     @GetMapping("/info")

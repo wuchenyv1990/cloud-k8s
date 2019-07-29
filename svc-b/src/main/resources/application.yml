@@ -1,8 +1,8 @@
 server:
-  port: ${svc-b-port:8080}
+  port: ${SVC-B-PORT:8080}
 spring:
   zipkin:
-    base-url: http://${zipkin-host:localhost}:${zipkin-port:9411}/
+    base-url: http://${ZIPKIN-HOST:localhost}:${ZIPKIN-PORT:9411}/
   sleuth:
     sampler:
       probability: 1

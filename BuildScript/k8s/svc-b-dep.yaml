@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: svc-b
+  namespace: cloud-k8s
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: svc-b
+  template:
+    metadata:
+      labels:
+        app: svc-b
+    spec:
+      containers:
+      - name: svc-b
+        image: svc-b:1.0
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        imagePullPolicy: IfNotPresent
+        env:
+          - name: SVC-C-HOST
+            valueFrom:
+              configMapKeyRef:
+                name: svc-config-map
+                key: SVC-C-HOST
+          - name: ZIPKIN-HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: svc-config-map
+                  key: ZIPKIN-HOST

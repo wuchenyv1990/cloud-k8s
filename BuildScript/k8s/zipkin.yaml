@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: zipkin
+  namespace: cloud-k8s
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zipkin
+  template:
+    metadata:
+      labels:
+        app: zipkin
+    spec:
+      containers:
+        - name: zipkin
+          image: openzipkin/zipkin:latest
+          ports:
+            - containerPort: 9411
+              protocol: TCP
+          imagePullPolicy: IfNotPresent
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: zipkin
+  namespace: cloud-k8s
+  labels:
+    app: zipkin
+spec:
+  type: ClusterIP
+  ports:
+    - targetPort: 9411
+      protocol: TCP
+      port: 9411
+  selector:
+    app: zipkin
