@@ -21,8 +21,8 @@ spec:
           protocol: TCP
         imagePullPolicy: IfNotPresent
         env:
-          - name: ZIPKIN-HOST
+          - name: ZIPKIN_HOST
             valueFrom:
               configMapKeyRef:
                 name: svc-config-map
-                key: ZIPKIN-HOST
+                key: ZIPKIN_HOST

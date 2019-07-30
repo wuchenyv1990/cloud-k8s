@@ -21,18 +21,18 @@ spec:
           protocol: TCP
         imagePullPolicy: IfNotPresent
         env:
-          - name: SVC-B-HOST
+          - name: B_SVC_NAME
             valueFrom:
               configMapKeyRef:
                 name: svc-config-map
-                key: SVC-B-HOST
-          - name: SVC-D-HOST
+                key: B_SVC_NAME
+          - name: D_SVC_NAME
             valueFrom:
               configMapKeyRef:
                 name: svc-config-map
-                key: SVC-D-HOST
-          - name: ZIPKIN-HOST
+                key: D_SVC_NAME
+          - name: ZIPKIN_HOST
             valueFrom:
               configMapKeyRef:
                 name: svc-config-map
-                key: ZIPKIN-HOST
+                key: ZIPKIN_HOST

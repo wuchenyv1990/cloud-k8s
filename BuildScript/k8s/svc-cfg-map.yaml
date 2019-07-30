@@ -4,7 +4,7 @@ metadata:
    name: svc-config-map
    namespace: cloud-k8s
 data:
-   ZIPKIN-HOST: zipkin
-   SVC-B-HOST: svc-b
-   SVC-C-HOST: svc-c
-   SVC-D-HOST: svc-d
+   ZIPKIN_HOST: zipkin
+   B_SVC_NAME: svc-b
+   C_SVC_NAME: svc-c
+   D_SVC_NAME: svc-d
