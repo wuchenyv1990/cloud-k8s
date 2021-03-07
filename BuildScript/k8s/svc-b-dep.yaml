@@ -20,6 +20,14 @@ spec:
         - containerPort: 8080
           protocol: TCP
         imagePullPolicy: IfNotPresent
+        livenessProbe:
+          httpGet:
+            path: /actuator/health/liveness
+            port: 8080
+        readinessProbe:
+          httpGet:
+            path: /actuator/health/readiness
+            port: 8080
         env:
           - name: C_SVC_NAME
             valueFrom:

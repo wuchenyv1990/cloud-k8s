@@ -7,7 +7,11 @@ spring:
     sampler:
       probability: 1
 
-cloud:
-  k8s:
-    x-trace-id:
+management:
+  info:
+    kubernetes:
       enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
